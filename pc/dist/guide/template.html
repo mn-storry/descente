@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>공통 템플릿</title>
+
+    <link href="guide.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <script src="../js/libs/jquery-1.9.1.js"></script>
+
+    <script>
+        (function($) {
+            $(function() {
+                let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+                const $guideElement = $('.guideElement');
+                $guideElement.each(function() {
+                    $(this).after(gBox);
+                    const $element = $(this).html();
+                    $(this).next().children('pre').html($element);
+                });
+
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+    <!-- 구현 페이지 js -->
+    <script src="../../js/common_ui.js"></script>
+    <!-- <script src="../../js/libs/jquery.selectric.min.js"></script> -->
+    <!-- 구현 페이지 js -->
+
+</head>
+
+<body>
+    <div class="maping">
+        <a href="template.html">Component</a>
+        <a href="template_element.html">Element</a>
+        <a href="template_layout.html">Layout</a>
+    </div>
+    <h1 class="guideTitleh1">Component</h1>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2">Breadcrumb</h2>
+    <div class="guideElement">
+        <div class="breadcrumb">
+            <a href="#">Home</a>
+            <a href="#">신발</a>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">Input</h2>
+    <div class="guideElement">
+        <div class="input">
+            <input type="text" name="" id="" class="inp">
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">Checkbox</h2>
+    <div class="guideElement">
+        <div class="chkbox">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">확인</span>
+            </label>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">Radio</h2>
+    <div class="guideElement">
+        <div class="chkbox">
+            <label>
+                <input type="radio" name="chk" id="">
+                <span class="text">예</span>
+            </label>
+        </div>
+        <div class="chkbox">
+            <label>
+                <input type="radio" name="chk" id="">
+                <span class="text">아니오</span>
+            </label>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">Button</h2>
+    <div class="guideElement">
+        <a href="#" class="btn type1"><span>버튼</span></a>
+    </div>
+
+    <h2 class="guideTitleh2">Button</h2>
+    <div class="guideElement">
+        <button type="button" class="btn type1"><span>버튼</span></button>
+    </div>
+
+    <h2 class="guideTitleh2">Selectbox</h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2">Pagination</h2>
+    <div class="guideElement">
+        <div class="pagination">
+            <a href="#" class="page-btn first">처음 페이지</a>
+            <a href="#" class="page-btn prev">이전 페이지</a>
+            <div class="pager">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+            </div>
+            <a href="#" class="page-btn next">다음 페이지</a>
+            <a href="#" class="page-btn last">마지막 페이지</a>
+        </div>
+    </div>
+    @include('_pagination.html')
+
+    <h2 class="guideTitleh2">Table</h2>
+    <div class="guideElement">
+        <div class="tbl type1">
+            <table>
+                <colgroup>
+                    <col>
+                    <col style="width:25%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="row">1</th>
+                        <th scope="row">2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">Tab</h2>
+    <div class="guideElement">
+        <div class="tab type1">
+            <ul>
+                <li>
+                    <a href="#" class="active"><span>탭1</span></a>
+                </li>
+                <li>
+                    <a href="#"><span>탭2</span></a>
+                </li>
+                <li>
+                    <a href="#"><span>탭3</span></a>
+                </li>
+                <li>
+                    <a href="#"><span>탭4</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2">List</h2>
+    <div class="guideElement">
+        <ul class="list type1">
+            <li>리스트</li>
+            <li>리스트</li>
+            <li>리스트</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

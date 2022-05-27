@@ -1,0 +1,154 @@
+@@include("_head.html",{
+	"page_main" : true,
+	"mainCss" : true,
+	"mainScript" : false,
+	"title" : "타이틀"
+})
+<body>
+	<div class="wrap">
+		@@include("_header.html",{
+			"page_main" : true
+		})
+
+		<!-- main -->
+		<main>
+
+			<div class="sw">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">1</div>
+					<div class="swiper-slide">2</div>
+					<div class="swiper-slide">3</div>
+					<div class="swiper-slide">4</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="sw pager">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">1+4</div>
+					<div class="swiper-slide">2+4</div>
+					<div class="swiper-slide">3+4</div>
+					<div class="swiper-slide">4+4</div>
+					<div class="swiper-slide">5+4</div>
+				</div>
+				<div class="swiper-button-next"></div>
+      	<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="sw progress">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">1+6</div>
+					<div class="swiper-slide">2+6</div>
+					<div class="swiper-slide">3+6</div>
+					<div class="swiper-slide">4+6</div>
+					<div class="swiper-slide">5+6</div>
+				</div>
+				<div class="swiper-button-next"></div>
+      	<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div>
+
+			<div class="tooltip">
+				<button type="button" data-tipopen>호출 sss</button>
+				<div class="tooltip-cont" data-widthout>
+					내용 <br> sdfsdsdfs  sdfsdsdfs <br>
+					내용
+					내용
+				</div>				
+			</div>
+
+			</div>
+
+			<div class="tab type2">
+				<span><a href="#">리스트</a></span>
+				<span><a href="#">리스트</a></span>
+				<span><a href="#">리스트</a></span>
+				<span><a href="#">리스트</a></span>
+			</div>
+
+			<div class="content-head">
+				<div class="front">
+					head
+				</div>
+				<div class="units">
+					unit					
+				</div>
+			</div>
+
+			<div class="content-head">
+				<div class="units">
+					units
+				</div>
+			</div>
+
+			<div class="slide-wrap">
+					<div class="slide-item">
+						<div class="slide-title">
+							<a href="#" class="slide-trg">제목</a>
+						</div>
+						<div class="slide-cont">
+							<div class="inner">
+								내용
+							</div>
+						</div>
+					</div>
+					<div class="slide-item">
+						<div class="slide-title">
+							<a href="#" class="slide-trg active">제목</a>
+						</div>
+						<div class="slide-cont">
+							<div class="inner">
+								내용
+							</div>
+						</div>
+					</div>
+			</div>
+
+			<div class="ba-box">
+				<button type="button" class="ba"><span class="text">버튼</span></button>
+			</div>
+
+			<div class="ba-box">
+				<button type="button" class="bai"><span class="text">버튼</span></button>
+			</div>
+
+			<div class="ba-box">
+				<a href="#" class="bai"><span class="text">버튼</span></a>
+			</div>
+
+			<button type="button" class="clipboard">copy</button>
+			<span class="toast-msg">
+				copy
+			</span>
+
+			<div class="item-wrap">
+				@@for (var i = 0; i < 10; i++) {
+					<div class="item">
+						<a href="#">
+							<figure>
+								<div class="thumb">
+									<img src="https://image.hmall.com/MH/MH002/20220426/130221/494.png" alt="">
+								</div>
+								<figcaption>
+									<ul>
+										<li>2</li>
+										<li>2</li>
+										<li>2</li>
+									</ul>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+				}
+			</div>
+
+		</main>
+		<!-- main -->
+
+		@@include("_footer.html")
+	</div>
+</body>
+</html>

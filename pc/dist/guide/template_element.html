@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>공통 템플릿</title>
+
+    <link href="guide.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <script src="../js/libs/jquery-1.9.1.js"></script>
+
+    <script>
+        (function($) {
+            $(function() {
+                let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+                const $guideElement = $('.guideElement');
+                $guideElement.each(function() {
+                    $(this).after(gBox);
+                    const $element = $(this).html();
+                    $(this).next().children('pre').html($element);
+                });
+
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+    <!-- 구현 페이지 js -->
+    <script src="../../js/common_ui.js"></script>
+    <!-- <script src="../../js/libs/jquery.selectric.min.js"></script> -->
+    <!-- 구현 페이지 js -->
+
+</head>
+
+<body>
+    <div class="maping">
+        <a href="template.html">Component</a>
+        <a href="template_element.html">Element</a>
+        <a href="template_layout.html">Layout</a>
+    </div>
+    <h1 class="guideTitleh1">Element</h1>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+        <div class="chkall-group">
+            <div class="chkall-group-title">
+                <div class="chkbox">
+                    <label>
+                        <input type="checkbox" name="" id="" class="checkall">
+                        <span class="text">전체선택</span>
+                    </label>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <div class="chkbox">
+                        <label>
+                            <input type="checkbox" name="" id="">
+                            <span class="text">선택</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="chkbox">
+                        <label>
+                            <input type="checkbox" name="" id="">
+                            <span class="text">선택</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+        <div class="slide-wrap">
+            <div class="slide-item">
+                <div class="slide-title">
+                    <a href="#" class="slide-trg">제목</a>
+                </div>
+                <div class="slide-cont">
+                    <div class="inner">
+                        내용
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item">
+                <div class="slide-title">
+                    <a href="#" class="slide-trg active">제목</a>
+                </div>
+                <div class="slide-cont">
+                    <div class="inner">
+                        내용
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+    <h2 class="guideTitleh2"></h2>
+    <div class="guideElement">
+
+    </div>
+
+
+</body>
+
+</html>
